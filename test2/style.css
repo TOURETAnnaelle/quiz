@@ -1,0 +1,96 @@
+ *,
+ *::before,
+ *::after {
+     box-sizing: border-box;
+ }
+ 
+ :root {
+     --hue-neutral: 200;
+     --hue-wrong: 0;
+     --hue-correct: 145;
+ }
+ 
+ body {
+     --hue: 188;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     width: 100vw;
+     height: 100vh;
+     justify-content: center;
+     align-items: center;
+     background-color: hsl(var(--hue), 100%, 20%);
+ }
+ 
+ .container {
+     width: 50%;
+     background: rgba(255, 252, 252, 0.1);
+     backdrop-filter: blur(2%);
+     box-shadow: 0 5% 5% rgba(255, 3, 3, 0.1);
+     border-radius: 10%;
+     padding: 5%;
+     font-size: 200%;
+     font-family: 'Times New Roman', Times, serif;
+ }
+ 
+ .btn-grid {
+     display: grid;
+     grid-template-columns: repeat(2, auto);
+     gap: 5%;
+     margin: 10% 0;
+ }
+ 
+ .btn {
+     --hue: var(--hue-neutral);
+     border: solid hsl(var(--hue), 100%, 30%);
+     background-color: hsl(var(--hue), 100%, 50%);
+     border-radius: 5%;
+     padding: 10% 20% 10%;
+     color: rgb(0, 0, 0);
+     outline: none;
+ }
+ 
+ .btn:hover {
+     border: 4% solid;
+     border-color: #fcf8f8;
+     border-radius: 5%;
+     --hue: 195;
+     cursor: pointer;
+ }
+ 
+ .btn.correct {
+     --hue: var(--hue-correct);
+     color: black;
+ }
+ 
+ .btn.wrong {
+     --hue: var(--hue-wrong);
+ }
+ 
+ .next-btn {
+     --hue: 300;
+     --saturation: 0;
+     color: azure;
+     font-size: 150%;
+     font-weight: bold;
+     padding: 2% 8%;
+ }
+ 
+ .start-btn {
+     --hue: 300;
+     --saturation: 0;
+     color: azure;
+     font-size: 200%;
+     font-weight: bold;
+     padding: 10% 20%;
+ }
+ 
+ .controls {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .hide {
+     display: none;
+ }
